@@ -10,12 +10,12 @@ function App() {
 
   return (
     <>
-      <Nav/>
-      <Hero/>
-      <Highlight/>
-      <Testimonial/>
-      <About/>
-      <Footer/>
+      <Nav height="150px" backgroundColor="#FFFFFF"/>
+      <Hero height="450px" backgroundColor="#495E57" rowCounts='20' rowGap='5px' rowHeight='17.75px'/>
+      <Highlight height="700px" backgroundColor="#FFFFFF"  rowCounts='9' rowGap='20px' rowHeight='60px'/>
+      <Testimonial height="550px" backgroundColor="#495E57" rowCounts='6' rowGap='20px' rowHeight='75px'/>
+      <About height="650px" backgroundColor="#FFFFFF" rowCounts='15' rowGap='10px' rowHeight='34px'/>
+      <Footer height="400px" backgroundColor="#495E57" rowCounts='20' rowGap='5px' rowHeight='15.25px'/>
     </>
   );
 }

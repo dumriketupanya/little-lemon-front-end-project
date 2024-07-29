@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*import font*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap');
+
+
+/* General Font Layout
+body {
+  font-family: 'karla', sans-serif;
+  line-height: 1.5;
+  color: #333333;
+  font-size: 16px;
+} */
+
+/* Font  */
+:root {
+  --font-extra-bold: 800;
+  --font-bold: 700;
+  --font-medium: 500;
+  --font-regular: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Font size and type*/
+h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 64px;
+  font-weight: var(--font-medium);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 40px;
+  font-weight: var(--font-regular);
+}
+
+h3 {
+  font-family: 'karla', serif;
+  font-size: 18px;
+  font-weight: var(--font-bold);
+}
+
+h4, article {
+  font-family: 'karla', serif;
+  font-size: 20px;
+  font-weight: var(--font-extra-bold);
+}
+
+h5 {
+  font-family: 'karla', serif;
+  font-size: 16px;
+  font-weight: var(--font-extra-bold);
+}
+
+li a, li {
+  font-family: 'karla', serif;
+  font-size: 18px;
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+nav li a:visited {
+  text-decoration: none;
+  color: #333333;
+}
+
+footer li a:visited {
+  text-decoration: none;
+  color: #EDEFEE;
+}
+
+p {
+  font-family: 'karla', serif;
+  font-size: 16px;
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+}
+
+
+/* Coler palette */
+[data-color="black"] {
+  color: #333333;
+}
+
+[data-color="yellow"] {
+  color: #F4CE14;
+}
+
+[data-color="white"] {
+  color: #EDEFEE;
+}
+
+[data-color="oldRose"] {
+  color: #EE9972;
+}
+
+/* Outer Container */
+.outerContainer {
+  width: 100%;
+  min-width: 1440px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Inner Container */
+.innerContainer {
+  display: grid;
+
+  max-width: 1320px; /* 1440px - (2 * margin) */
+  margin: 0 auto;
+  grid-template-columns: repeat(12, calc(1100px / 12));
+  column-gap: 20px;
+
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
