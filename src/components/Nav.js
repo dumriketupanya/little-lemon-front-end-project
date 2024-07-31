@@ -35,18 +35,18 @@ function Nav(props) {
     }
 
     return (
-        <nav className="outerContainer" style={outerDetailContainer}>
+        <nav className="outerContainer" style={outerDetailContainer} aria-label="Main navigation">
             <div className="innerContainer" style={innerDetailContainer}>
                 <img src={`${process.env.PUBLIC_URL}/little-lemon-pic/Logo.jpg`}
                 alt="Little Lemon Logo"
                 style={logoStyle}/>
-                <ul style={navStyle}>
-                    <li><Link to="/home">HOME</Link></li>
-                    <li><Link to="/about">ABOUT</Link></li>
-                    <li><Link to="/menu">MENU</Link></li>
-                    <li><Link to="/reservations">RESERVATIONS</Link></li>
-                    <li><Link to="/orderonline">ORDER ONLINE</Link></li>
-                    <li><Link to="/login">LOGIN</Link></li>
+                <ul style={navStyle} role="menubar">
+                <li role="none"><Link to="/home" role="menuitem" aria-current={window.location.pathname === '/home' ? 'page' : undefined}>HOME</Link></li>
+                    <li role="none"><Link to="/about" role="menuitem" aria-current={window.location.pathname === '/about' ? 'page' : undefined}>ABOUT</Link></li>
+                    <li role="none"><Link to="/menu" role="menuitem" aria-current={window.location.pathname === '/menu' ? 'page' : undefined}>MENU</Link></li>
+                    <li role="none"><Link to="/reservations" role="menuitem" aria-current={window.location.pathname === '/reservations' ? 'page' : undefined}>RESERVATIONS</Link></li>
+                    <li role="none"><Link to="/orderonline" role="menuitem" aria-current={window.location.pathname === '/orderonline' ? 'page' : undefined}>ORDER ONLINE</Link></li>
+                    <li role="none"><Link to="/login" role="menuitem" aria-current={window.location.pathname === '/login' ? 'page' : undefined}>LOGIN</Link></li>
                 </ul>
             </div>
         </nav>

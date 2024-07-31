@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function Footer(props) {
 
@@ -8,6 +9,7 @@ function Footer(props) {
     };
 
     const innerDetailContainer = {
+        display: 'grid',
         gridTemplateRows: `repeat(${props.rowCounts}, ${props.rowHeight})`,
         rowGap: props.rowGap,
     };
@@ -59,31 +61,34 @@ function Footer(props) {
     };
 
     return (
-        <footer className="outerContainer" style={outerDetailContainer}>
+         <footer className="outerContainer" style={outerDetailContainer} aria-label="Footer">
             <div className="innerContainer" style={innerDetailContainer} data-color="white">
-            <img src={`${process.env.PUBLIC_URL}/little-lemon-pic/restaurant.jpg`}
-                alt="restaurant" style={footerImageStyle}></img>
-                <h4 style={doorMatHeadingStyle}>Doormat Navigation</h4>
-                    <ul style={doorMatStyle}>
-                        <li><a href="/home">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/menu">Menu</a></li>
-                        <li><a href="/reservations">Reservations</a></li>
-                        <li><a href="/orderonline">Order Online</a></li>
-                        <li><a href="/login">Login</a></li>
-                    </ul>
-                <h4 style={contactHeadingStyle}>Contact</h4>
-                    <ul style={contactStyle}>
-                        <li>Address</li>
-                        <li>Phone</li>
-                        <li>Email</li>
-                    </ul>
-                <h4 style={socialHeadingStyle}>Social Media</h4>
-                    <ul style={socialMediaStyle}>
-                        <li>Facebook</li>
-                        <li>Instagram</li>
-                        <li>Twitter</li>
-                    </ul>
+                <img
+                    src={`${process.env.PUBLIC_URL}/little-lemon-pic/restaurant.jpg`}
+                    alt="Restaurant view"
+                    style={footerImageStyle}
+                />
+                <h4 style={doorMatHeadingStyle} aria-label="Doormat Navigation">Doormat Navigation</h4>
+                <ul style={doorMatStyle} role="navigation" aria-label="Doormat Navigation Links">
+                    <li><Link to="/home" aria-label="Go to Home page">Home</Link></li>
+                    <li><Link to="/about" aria-label="Go to About page">About</Link></li>
+                    <li><Link to="/menu" aria-label="Go to Menu page">Menu</Link></li>
+                    <li><Link to="/reservations" aria-label="Go to Reservations page">Reservations</Link></li>
+                    <li><Link to="/orderonline" aria-label="Go to Order Online page">Order Online</Link></li>
+                    <li><Link to="/login" aria-label="Go to Login page">Login</Link></li>
+                </ul>
+                <h4 style={contactHeadingStyle} aria-label="Contact Information">Contact</h4>
+                <ul style={contactStyle} aria-label="Contact Information">
+                    <li>Address</li>
+                    <li>Phone</li>
+                    <li>Email</li>
+                </ul>
+                <h4 style={socialHeadingStyle} aria-label="Social Media">Social Media</h4>
+                <ul style={socialMediaStyle} aria-label="Social Media Links">
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                </ul>
             </div>
         </footer>
     )

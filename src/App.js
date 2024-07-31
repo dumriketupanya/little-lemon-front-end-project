@@ -7,7 +7,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import { Routes, Route } from 'react-router-dom';
 
-import BookingPage from './pages/BookingPage';
+import BookingForm from './pages/BookingPage';
 import AboutPage from './pages/AboutPage';
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
 
         <Route path="/reservations" element={
           <>
-            <BookingPage />
+            <BookingForm />
           </>
         }/>
       </Routes>

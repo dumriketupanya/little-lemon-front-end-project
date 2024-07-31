@@ -1,10 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Hero(props) {
 
-    console.log(props);
-    console.log(`repeat(${props.rowCounts}, ${props.rowHeight})`);
-    console.log(props.rowGap);
+    const navigate = useNavigate();
 
     const outerDetailContainer = {
         height: props.height,
@@ -46,6 +45,11 @@ function Hero(props) {
         gridRowStart: '3',
     };
 
+    const buttonStyle = {
+        gridRowStart: '17',
+        gridColumnStart: '3'
+    };
+
     return (
         <header className="outerContainer" style={outerDetailContainer}>
             <div className="innerContainer" style={innerDetailContainer}>
@@ -57,6 +61,11 @@ function Hero(props) {
                 <img src={`${process.env.PUBLIC_URL}/little-lemon-pic/Main.jpg`}
                 alt="Restaurant"
                 style={picStyle}></img>
+                <button type="button"
+                    button-style="homepage"
+                    style={buttonStyle}
+                    onClick={() => navigate('/reservations')}>
+                        Reserve a Table</button>
             </div>
         </header>
     )

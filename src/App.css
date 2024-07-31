@@ -10,13 +10,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap');
 
 
-/* General Font Layout
-body {
-  font-family: 'karla', sans-serif;
-  line-height: 1.5;
-  color: #333333;
-  font-size: 16px;
-} */
 
 /* Font  */
 :root {
@@ -82,6 +75,33 @@ p {
   line-height: 1.5;
 }
 
+/*Button*/
+[button-style="homepage"] {
+  height: 50px;
+  width: 181px;
+  background-color: #F4CE14;
+  color: #333333;
+  border-radius: 16px;
+  border: none;
+
+  font-family: 'karla', serif;
+  font-size: 18px;
+  font-weight: var(--font-bold);
+}
+
+/*input*/
+input, select {
+  background-color: #EDEFEE;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+
+  font-family: 'karla', serif;
+  font-size: 16px;
+  color: #333333;
+  font-weight: var(--font-regular);
+};
 
 /* Coler palette */
 [data-color="black"] {

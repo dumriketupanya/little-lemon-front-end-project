@@ -1,9 +1,10 @@
 import React from "react";
 import HighlightFood from "./HightlightFood";
+import { useNavigate } from "react-router-dom";
 
 function Highlight(props) {
 
-    console.log(props);
+    const navigate = useNavigate();
 
     const outerDetailContainer = {
         height: props.height,
@@ -60,6 +61,10 @@ function Highlight(props) {
         }
     ];
 
+    const buttonStyle = {
+        gridRowStart: '2',
+        gridColumnStart: '9'
+    };
 
     return (
         <main className="outerContainer" style={outerDetailContainer}>
@@ -77,6 +82,11 @@ function Highlight(props) {
                         />
                     ))}
                 </figure>
+                <button type="button"
+                    button-style="homepage"
+                    style={buttonStyle}
+                    onClick={() => navigate('/menu')}>
+                        Orders Now!</button>
             </article>
         </main>
     )
