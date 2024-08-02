@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*import font*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap');
+
+
+
+/* Font  */
+:root {
+  --font-extra-bold: 800;
+  --font-bold: 700;
+  --font-medium: 500;
+  --font-regular: 400;
+}
+
+/* Font size and type*/
+h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 64px;
+  font-weight: var(--font-medium);
+}
+
+h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 40px;
+  font-weight: var(--font-regular);
+}
+
+h3 {
+  font-family: 'karla', serif;
+  font-size: 18px;
+  font-weight: var(--font-bold);
+}
+
+h4, article {
+  font-family: 'karla', serif;
+  font-size: 20px;
+  font-weight: var(--font-extra-bold);
+}
+
+h5 {
+  font-family: 'karla', serif;
+  font-size: 16px;
+  font-weight: var(--font-extra-bold);
+}
+
+li a, li {
+  font-family: 'karla', serif;
+  font-size: 18px;
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+nav li a:visited {
+  text-decoration: none;
+  color: #333333;
+}
+
+footer li a:visited {
+  text-decoration: none;
+  color: #EDEFEE;
+}
+
+p {
+  font-family: 'karla', serif;
+  font-size: 16px;
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+}
+
+/*Button*/
+[button-style="homepage"] {
+  height: 50px;
+  width: 181px;
+  background-color: #F4CE14;
+  color: #333333;
+  border-radius: 16px;
+  border: none;
+
+  font-family: 'karla', serif;
+  font-size: 18px;
+  font-weight: var(--font-bold);
+}
+
+/*input*/
+input, select {
+  background-color: #EDEFEE;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+
+  font-family: 'karla', serif;
+  font-size: 16px;
+  color: #333333;
+  font-weight: var(--font-regular);
+};
+
+/* Coler palette */
+[data-color="black"] {
+  color: #333333;
+}
+
+[data-color="yellow"] {
+  color: #F4CE14;
+}
+
+[data-color="white"] {
+  color: #EDEFEE;
+}
+
+[data-color="oldRose"] {
+  color: #EE9972;
+}
+
+/* Outer Container */
+.outerContainer {
+  width: 100%;
+  min-width: 1440px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Inner Container */
+.innerContainer {
+  display: grid;
+
+  max-width: 1320px; /* 1440px - (2 * margin) */
+  margin: 0 auto;
+  grid-template-columns: repeat(12, calc(1100px / 12));
+  column-gap: 20px;
+
+  justify-content: center;
+}
+
